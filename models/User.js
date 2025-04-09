@@ -1,22 +1,17 @@
-import mongoose from "mongoose";
+// models/User.js
+const mongoose = require("mongoose");
 
-const ContactSchema = new mongoose.Schema({
-  name: String,
-  phone: String,
-  relation: String,
-});
-
-const UserSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     name: String,
     email: { type: String, unique: true },
     password: String,
-    phone: String,
+    mobile: String,
+    dob: String,
     bloodGroup: String,
-    address: String,
-    trustedContacts: [ContactSchema],
+    avatar: String,
   },
   { timestamps: true }
 );
 
-export default mongoose.models.User || mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", userSchema);
