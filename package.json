@@ -1,0 +1,11 @@
+{
+  "name": "nirbhaya-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "mongoose": "^7.0.0"
+  }
+}
